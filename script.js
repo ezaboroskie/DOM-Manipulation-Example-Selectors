@@ -45,19 +45,6 @@
     spanContainer.append(newSpan)
 
 
-//Targets the button with id add-text-btn and div with id of dynamic-text-container
-    const newTextBtn = document.getElementById('add-text-btn')
-    const newTextContainer = document.getElementById('dynamic-text-container')
-
-
-//Adds an event listener to the button that creates a new span on click and appends it to the div container
-    newTextBtn.addEventListener('click', function(){
-        const dynamicSpan = document.createElement('span')
-        dynamicSpan.innerHTML= 'This text was added dynamically with a button' 
-        newTextContainer.appendChild(dynamicSpan) 
-    })
-
-
 //Target multiple elements wtih querySelectorAll
 //Returns a NodeList that can be iterated on
     const allSpans = document.querySelectorAll('span')
@@ -117,6 +104,23 @@
 //calls the addPostData function twice and passes a different array as the argument each time 
     addPostData(postData1)
     addPostData(postData2)
+
+
+
+//BONUS 
+//Adds functionality to a button to dynamically create spans on button click
+
+//Targets the button with id add-text-btn and div with id of dynamic-text-container
+const newTextBtn = document.getElementById('add-text-btn')
+const newTextContainer = document.getElementById('dynamic-text-container')
+
+
+//Adds an event listener to the button that creates a new span on click and appends it to the div container
+newTextBtn.addEventListener('click', function(){
+    const dynamicSpan = document.createElement('span')
+    dynamicSpan.innerHTML= 'This text was added dynamically with a button' 
+    newTextContainer.appendChild(dynamicSpan) 
+})
     
 
 
