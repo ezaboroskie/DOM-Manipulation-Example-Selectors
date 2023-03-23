@@ -67,6 +67,61 @@
 
 
 
+//Function to dynamically create divs with post data
+//First creates global variables that target the post container and the post arrays
+    const dynamicPostContainer =  document.getElementById('dynamic-post-container')
+    const postData1 = [
+        {
+            title: 'Title 1',
+            author: "Person 1",
+        }
+    ]
+    const postData2 = [
+        {
+            title: 'This title was generated using a function',
+            author: 'Amazing Person',
+        },
+        {
+            title: 'This title was generated AGAIN using a cool function',
+            author: 'An Awesome Individual'
+        }
+    ]
+
+
+    //This function takes in an array of posts as the parameter
+    let addPostData = (postdata) =>{
+    
+        //creates a new div container to hold the new list of posts
+        let newDiv = document.createElement('div');
+        dynamicPostContainer.append(newDiv)
+
+        //calling forEach on the paremeter of the function for each element in the array of objects this loop will:
+            // 1) create new h3 and p elements
+            // 2) assigns the innerHTML of each h3 to be the title of each element and the innerHTML 
+            //    of each p to be the author of each element
+            // 3) appends the variables containing the innerHTML of the h3 and p tags
+        postdata.forEach(element=> {
+            
+            let newH3 = document.createElement('h3')
+            let newP = document.createElement('p')
+
+            newH3.innerHTML=element.title
+            newP.innerHTML=element.author
+
+            newDiv.append(newH3)
+            newDiv.append(newP)
+            })
+    }
+
+
+//calls the addPostData function twice and passes a different array as the argument each time 
+    addPostData(postData1)
+    addPostData(postData2)
+    
+
+
+
+
 
 
 
