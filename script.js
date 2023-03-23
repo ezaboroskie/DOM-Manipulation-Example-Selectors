@@ -13,6 +13,7 @@
 
     subChildren.forEach(element=>element.style.color = 'red')
     
+
 //Target an element by tag name
 //An HTMLCollection is returned and changed into an iterable array
 //forEach is used to style each element in the now iterable array
@@ -31,6 +32,7 @@
     selectedSpan.style.fontSize="40px"
     selectedSpan.style.color='purple'
 
+
 //Target the span container with getElementById
 //Creates a new span element using createElement
 //InnerHTML adds text to the newSpan element
@@ -42,9 +44,11 @@
     newSpan.style.color='black'
     spanContainer.append(newSpan)
 
+
 //Targets the button with id add-text-btn and div with id of dynamic-text-container
     const newTextBtn = document.getElementById('add-text-btn')
     const newTextContainer = document.getElementById('dynamic-text-container')
+
 
 //Adds an event listener to the button that creates a new span on click and appends it to the div container
     newTextBtn.addEventListener('click', function(){
