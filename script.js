@@ -4,14 +4,16 @@
 //A variable called mainHeading is returned which can be directly manipulated
     const mainHeading = document.getElementById('main-heading')
     mainHeading.style.fontSize = '75px'
+    mainHeading.style.color='darkblue'
 
 
 //Target an element by class name
 //An HTMLCollection is returned and changed into an iterable array
     const subHeadings = document.getElementsByClassName('p-sub-heading')
     let subChildren = Array.from(subHeadings)
-
+    
     subChildren.forEach(element=>element.style.color = 'red')
+   
     
 
 //Target an element by tag name
@@ -42,6 +44,7 @@
 
     newSpan.innerHTML='This text was appended'
     newSpan.style.color='black'
+    
     spanContainer.append(newSpan)
 
 
